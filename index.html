@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,52 +7,902 @@
 <meta name="theme-color" content="#11110f">
 <meta name="description" content="THE UNKNOWNX — a personal journal, creative portfolio and record of the journey.">
 <title>THE UNKNOWNX — Personal Journal & Portfolio</title>
+
 <style>
-:root{--ink:#141411;--paper:#eee9dc;--muted:#aaa596;--gold:#b99b63;--line:rgba(238,233,220,.16);--serif:Georgia,'Times New Roman',serif;--sans:Arial,Helvetica,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:var(--sans);line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit}
-.wrap{width:min(1120px,90%);margin:auto}.topbar{position:sticky;top:0;z-index:10;background:rgba(20,20,17,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font:600 17px var(--serif);letter-spacing:.16em}.brand span{color:var(--gold)}.links{display:flex;gap:25px;color:#c9c3b5;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.links a:hover{color:var(--gold)}.menu{display:none;background:none;border:1px solid var(--line);color:var(--paper);padding:8px 12px}
-.hero{min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:85px 0 95px}.eyebrow{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}h1{font:clamp(56px,9vw,112px)/.92 var(--serif);font-weight:400;letter-spacing:-.055em;margin:25px 0}h1 em{font-weight:400;color:var(--gold)}.intro{max-width:490px;color:#c3bdaf;font:17px/1.8 var(--serif)}.actions{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-block;padding:13px 19px;border:1px solid var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}.btn:hover{transform:translateY(-3px);background:var(--gold);color:var(--ink);border-color:var(--gold)}
-.cover{background:var(--paper);color:var(--ink);padding:26px;min-height:440px;display:flex;flex-direction:column;justify-content:space-between;position:relative;box-shadow:18px 18px 0 rgba(185,155,99,.14);transform:rotate(1.5deg)}.cover:before{content:"";position:absolute;inset:12px;border:1px solid rgba(20,20,17,.22);pointer-events:none}.cover-top,.cover-bottom{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.18em;text-transform:uppercase}.cover-title{text-align:center;font:clamp(35px,5vw,58px)/.95 var(--serif);letter-spacing:-.05em}.cover-title small{display:block;font:10px var(--sans);letter-spacing:.3em;margin-top:22px}.cover-mark{text-align:center;font:42px var(--serif);color:#a58a59}
-section{padding:95px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.section-head h2{font:clamp(36px,5vw,58px)/1 var(--serif);font-weight:400;margin:10px 0 0;letter-spacing:-.04em}.section-note{max-width:300px;color:var(--muted);font:14px/1.7 var(--serif)}.about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.monogram{border:1px solid var(--gold);aspect-ratio:4/5;display:grid;place-items:center;background:linear-gradient(145deg,#24231e,#11110f)}.monogram span{font:clamp(90px,15vw,170px) var(--serif);color:var(--gold)}.about-copy p{font:20px/1.8 var(--serif);color:#d6d0c2;margin-top:0}.small-copy{font:13px/1.9 var(--sans)!important;color:var(--muted)!important}.quote{margin-top:32px;padding:24px 0 24px 25px;border-left:1px solid var(--gold);font:italic 24px/1.5 var(--serif);color:var(--paper)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);padding:26px;min-height:220px;background:rgba(255,255,255,.015);transition:.25s}.card:hover{border-color:var(--gold);transform:translateY(-4px)}.card .num{font-size:10px;color:var(--gold);letter-spacing:.2em}.card h3{font:27px var(--serif);font-weight:400;margin:28px 0 8px}.card p{font-size:13px;color:var(--muted);line-height:1.8;margin:0}.timeline{border-left:1px solid var(--gold);margin-left:8px;padding-left:28px;display:grid;gap:30px}.moment{position:relative}.moment:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--gold);left:-32px;top:8px}.moment .date{font-size:10px;color:var(--gold);letter-spacing:.2em}.moment h3{font:25px var(--serif);font-weight:400;margin:5px 0}.moment p{color:var(--muted);font-size:13px;margin:0;max-width:620px}
-.journal{background:var(--paper);color:var(--ink);padding:40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}.journal h3{font:38px/1.05 var(--serif);font-weight:400;margin:10px 0}.journal p{color:#625d52;font:15px/1.8 var(--serif)}.journal label{display:block;font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin:0 0 8px}.journal input,.journal textarea{width:100%;border:0;border-bottom:1px solid #b7b0a2;background:transparent;padding:11px 0;color:var(--ink);font:15px var(--serif);outline:none}.journal textarea{min-height:110px;resize:vertical}.journal button{margin-top:15px;background:var(--ink);color:var(--paper);border:0;padding:13px 18px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}.entries{display:grid;gap:12px;max-height:320px;overflow:auto}.entry{border-bottom:1px solid #cfc8b9;padding:0 0 12px}.entry strong{font:18px var(--serif)}.entry time{display:block;font-size:10px;color:#777064;margin:4px 0}.entry p{margin:0;font-size:13px}.journal-hint{font:11px var(--sans)!important;color:#777064!important}
-.gallery{display:grid;grid-template-columns:1.05fr .95fr;grid-template-rows:260px 260px;gap:14px}
-.gallery figure{margin:0;position:relative;overflow:hidden;background:#24231e;border:1px solid var(--line)}
+:root{
+  --ink:#141411;
+  --paper:#eee9dc;
+  --muted:#aaa596;
+  --gold:#b99b63;
+  --line:rgba(238,233,220,.16);
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:Arial,Helvetica,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.wrap{width:min(1120px,90%);margin:auto}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(20,20,17,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font:600 17px var(--serif);
+  letter-spacing:.16em;
+}
+.brand span{color:var(--gold)}
+.links{
+  display:flex;
+  gap:25px;
+  color:#c9c3b5;
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.links a:hover{color:var(--gold)}
+.menu{
+  display:none;
+  background:none;
+  border:1px solid var(--line);
+  color:var(--paper);
+  padding:8px 12px;
+}
+
+.hero{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  align-items:center;
+  gap:55px;
+  padding:85px 0 95px;
+}
+.eyebrow{
+  font-size:10px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+h1{
+  font:clamp(56px,9vw,112px)/.92 var(--serif);
+  font-weight:400;
+  letter-spacing:-.055em;
+  margin:25px 0;
+}
+h1 em{font-weight:400;color:var(--gold)}
+.intro{
+  max-width:490px;
+  color:#c3bdaf;
+  font:17px/1.8 var(--serif);
+}
+.actions{
+  display:flex;
+  gap:13px;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-block;
+  padding:13px 19px;
+  border:1px solid var(--gold);
+  font-size:10px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  transition:.25s;
+}
+.btn.primary{
+  background:var(--paper);
+  color:var(--ink);
+  border-color:var(--paper);
+}
+.btn:hover{
+  transform:translateY(-3px);
+  background:var(--gold);
+  color:var(--ink);
+  border-color:var(--gold);
+}
+
+.cover{
+  background:var(--paper);
+  color:var(--ink);
+  padding:26px;
+  min-height:440px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:relative;
+  box-shadow:18px 18px 0 rgba(185,155,99,.14);
+  transform:rotate(1.5deg);
+}
+.cover:before{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border:1px solid rgba(20,20,17,.22);
+  pointer-events:none;
+}
+.cover-top,.cover-bottom{
+  display:flex;
+  justify-content:space-between;
+  font-size:9px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.cover-title{
+  text-align:center;
+  font:clamp(35px,5vw,58px)/.95 var(--serif);
+  letter-spacing:-.05em;
+}
+.cover-title small{
+  display:block;
+  font:10px var(--sans);
+  letter-spacing:.3em;
+  margin-top:22px;
+}
+.cover-mark{
+  text-align:center;
+  font:42px var(--serif);
+  color:#a58a59;
+}
+
+section{
+  padding:95px 0;
+  border-top:1px solid var(--line);
+}
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:25px;
+  margin-bottom:38px;
+}
+.section-head h2{
+  font:clamp(36px,5vw,58px)/1 var(--serif);
+  font-weight:400;
+  margin:10px 0 0;
+  letter-spacing:-.04em;
+}
+.section-note{
+  max-width:300px;
+  color:var(--muted);
+  font:14px/1.7 var(--serif);
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:.7fr 1.3fr;
+  gap:70px;
+}
+.monogram{
+  border:1px solid var(--gold);
+  aspect-ratio:4/5;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#24231e,#11110f);
+}
+.monogram span{
+  font:clamp(90px,15vw,170px) var(--serif);
+  color:var(--gold);
+}
+.about-copy p{
+  font:20px/1.8 var(--serif);
+  color:#d6d0c2;
+  margin-top:0;
+}
+.small-copy{
+  font:13px/1.9 var(--sans)!important;
+  color:var(--muted)!important;
+}
+.quote{
+  margin-top:32px;
+  padding:24px 0 24px 25px;
+  border-left:1px solid var(--gold);
+  font:italic 24px/1.5 var(--serif);
+  color:var(--paper);
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.card{
+  border:1px solid var(--line);
+  padding:26px;
+  min-height:220px;
+  background:rgba(255,255,255,.015);
+  transition:.25s;
+}
+.card:hover{
+  border-color:var(--gold);
+  transform:translateY(-4px);
+}
+.card .num{
+  font-size:10px;
+  color:var(--gold);
+  letter-spacing:.2em;
+}
+.card h3{
+  font:27px var(--serif);
+  font-weight:400;
+  margin:28px 0 8px;
+}
+.card p{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.8;
+  margin:0;
+}
+
+.timeline{
+  border-left:1px solid var(--gold);
+  margin-left:8px;
+  padding-left:28px;
+  display:grid;
+  gap:30px;
+}
+.moment{position:relative}
+.moment:before{
+  content:"";
+  position:absolute;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  left:-32px;
+  top:8px;
+}
+.moment .date{
+  font-size:10px;
+  color:var(--gold);
+  letter-spacing:.2em;
+}
+.moment h3{
+  font:25px var(--serif);
+  font-weight:400;
+  margin:5px 0;
+}
+.moment p{
+  color:var(--muted);
+  font-size:13px;
+  margin:0;
+  max-width:620px;
+}
+
+.journal{
+  background:var(--paper);
+  color:var(--ink);
+  padding:40px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:40px;
+}
+.journal h3{
+  font:38px/1.05 var(--serif);
+  font-weight:400;
+  margin:10px 0;
+}
+.journal p{
+  color:#625d52;
+  font:15px/1.8 var(--serif);
+}
+.journal label{
+  display:block;
+  font-size:10px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin:0 0 8px;
+}
+.journal input,.journal textarea{
+  width:100%;
+  border:0;
+  border-bottom:1px solid #b7b0a2;
+  background:transparent;
+  padding:11px 0;
+  color:var(--ink);
+  font:15px var(--serif);
+  outline:none;
+}
+.journal textarea{
+  min-height:110px;
+  resize:vertical;
+}
+.journal button{
+  margin-top:15px;
+  background:var(--ink);
+  color:var(--paper);
+  border:0;
+  padding:13px 18px;
+  font-size:10px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.entries{
+  display:grid;
+  gap:12px;
+  max-height:320px;
+  overflow:auto;
+}
+.entry{
+  border-bottom:1px solid #cfc8b9;
+  padding:0 0 12px;
+}
+.entry strong{font:18px var(--serif)}
+.entry time{
+  display:block;
+  font-size:10px;
+  color:#777064;
+  margin:4px 0;
+}
+.entry p{margin:0;font-size:13px}
+.journal-hint{
+  font:11px var(--sans)!important;
+  color:#777064!important;
+}
+
+/* PHOTO GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  grid-template-rows:260px 260px;
+  gap:14px;
+}
+.gallery figure{
+  margin:0;
+  position:relative;
+  overflow:hidden;
+  background:#24231e;
+  border:1px solid var(--line);
+  min-width:0;
+}
 .gallery figure:first-child{grid-row:span 2}
-.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s;
+}
 .gallery figure:hover img{transform:scale(1.035)}
-.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 18px 15px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#eee9dc;font:17px var(--serif)}
-.contact{display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{font:clamp(40px,6vw,70px)/1 var(--serif);font-weight:400;margin:12px 0}.contact p{color:var(--muted);max-width:440px}.footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;display:flex;justify-content:space-between;gap:20px}
-@media(max-width:760px){.links{display:none;position:absolute;top:72px;left:0;right:0;background:#171713;padding:22px 5%;flex-direction:column;gap:17px;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:70px 0;gap:45px;min-height:0}.cover{min-height:360px;width:min(100%,420px);margin:auto}.about-grid,.journal{grid-template-columns:1fr;gap:28px}.monogram{max-width:260px;aspect-ratio:1.2}.cards{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:18px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:250px 190px}.gallery figure:first-child{grid-column:span 2;grid-row:auto}.contact{display:block}.contact .btn{margin-top:15px}.footer{flex-direction:column}}
+.gallery figcaption{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:28px 18px 15px;
+  background:linear-gradient(transparent,rgba(0,0,0,.78));
+  color:#eee9dc;
+  font:17px var(--serif);
+}
+
+/* SHOW A CLEAR MESSAGE IF A PHOTO FILE IS MISSING */
+.gallery figure.image-missing{
+  display:grid;
+  place-items:center;
+  min-height:180px;
+}
+.gallery figure.image-missing img{display:none}
+.gallery figure.image-missing figcaption{
+  position:static;
+  background:none;
+  text-align:center;
+  color:#c9c3b5;
+  padding:20px;
+}
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:25px 0;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+@media(max-width:760px){
+  .links{
+    display:none;
+    position:absolute;
+    top:72px;
+    left:0;
+    right:0;
+    background:#171713;
+    padding:22px 5%;
+    flex-direction:column;
+    gap:17px;
+    border-bottom:1px solid var(--line);
+  }
+  .links.open{display:flex}
+  .menu{display:block}
+  .hero{
+    grid-template-columns:1fr;
+    padding:70px 0;
+    gap:45px;
+    min-height:0;
+  }
+  .cover{
+    min-height:360px;
+    width:min(100%,420px);
+    margin:auto;
+  }
+  .about-grid,.journal{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .monogram{
+    max-width:260px;
+    aspect-ratio:1.2;
+  }
+  .cards{grid-template-columns:1fr}
+  .section-head{display:block}
+  .section-note{margin-top:18px}
+  .gallery{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:250px 190px 190px;
+    gap:12px;
+  }
+  .gallery figure:first-child{
+    grid-column:span 2;
+    grid-row:auto;
+  }
+  .contact{display:block}
+  .footer{flex-direction:column}
+}
 </style>
 </head>
-<body>
-<header class="topbar"><div class="wrap nav"><a class="brand" href="#home">THE <span>UNKNOWNX</span></a><button class="menu" id="menu" aria-label="Toggle navigation">MENU</button><nav class="links" id="links"><a href="#about">About</a><a href="#journey">Journey</a><a href="#work">Projects</a><a href="#journal">Journal</a><a href="#moments">Moments</a><a href="#contact">Contact</a></nav></div></header>
-<main>
-<div class="wrap hero" id="home"><div><div class="eyebrow">A personal journal · A creative portfolio</div><h1>THE<br><em>UNKNOWNX</em></h1><p class="intro">A quiet space for ideas, memories and things still becoming. This is my story in progress — written one page, one project and one lesson at a time.</p><div class="actions"><a class="btn primary" href="#about">Discover my story</a><a class="btn" href="#journal">Open the journal</a></div></div><div class="cover"><div class="cover-top"><span>Personal archive</span><span>Vol. 01</span></div><div><div class="cover-mark">✳</div><div class="cover-title">The Art of<br>Becoming<small>NOT FINISHED. JUST BEGINNING.</small></div></div><div class="cover-bottom"><span>Est. 2026</span><span>Private thoughts · Public work</span></div></div></div>
-<section id="about"><div class="wrap"><div class="section-head"><div><div class="eyebrow">01 / The person behind the pages</div><h2>A little about me.</h2></div><p class="section-note">Not a finished story. Just a collection of curiosity, experiments and ambitions.</p></div><div class="about-grid"><div class="monogram"><span>U.</span></div><div class="about-copy"><p>I’m a curious creator who enjoys turning ideas into things people can experience — from digital projects and creative media to small business experiments.</p><p class="small-copy">I believe progress is built quietly: learn something, try something, make mistakes, improve, and keep moving. This website is my evolving record of that process.</p><div class="quote">“Stay curious. Build with intention. Let the work speak.”</div></div></div></div></section>
-<section id="journey"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 / Notes from the road</div><h2>The journey.</h2></div><p class="section-note">A timeline that can grow as new chapters happen.</p></div><div class="timeline"><div class="moment"><div class="date">CHAPTER 01 · THE BEGINNING</div><h3>Curiosity becomes creation</h3><p>Exploring technology, design, music and the possibilities of building something independently.</p></div><div class="moment"><div class="date">CHAPTER 02 · EXPERIMENTS</div><h3>Learning by making</h3><p>Trying ideas across websites, creative projects and business concepts — discovering what works along the way.</p></div><div class="moment"><div class="date">CHAPTER 03 · STILL UNWRITTEN</div><h3>What comes next</h3><p>The next chapter is open. New skills, better work and bigger ideas belong here.</p></div></div></div></section>
-<section id="work"><div class="wrap"><div class="section-head"><div><div class="eyebrow">03 / Selected explorations</div><h2>Things I’m building.</h2></div><p class="section-note">A few creative directions and projects from my world.</p></div><div class="cards"><article class="card"><div class="num">01 — CREATIVE MEDIA</div><h3>Audio Nexus Hub</h3><p>A music-focused creative brand exploring AI-assisted covers, music discovery and visual identity.</p></article><article class="card"><div class="num">02 — SMALL BUSINESS</div><h3>Zyka Gold</h3><p>A spices brand concept focused on product presentation, customer enquiries and digital presence.</p></article><article class="card"><div class="num">03 — DIGITAL PRODUCT</div><h3>SNIPCHI</h3><p>An app-building exploration focused on bringing useful creative tools and experiences together.</p></article></div></div></section>
-<section id="journal"><div class="wrap"><div class="section-head"><div><div class="eyebrow">04 / The open notebook</div><h2>Journal pages.</h2></div><p class="section-note">Write a thought, save a small memory, or leave a note for your future self.</p></div><div class="journal"><div><div class="eyebrow" style="color:#8b7045">A page of your own</div><h3>Some things deserve a place to stay.</h3><p>Your entries are saved only in this browser on this device. This demo journal does not upload entries to a server.</p><form id="entryForm"><label for="entryTitle">Page title</label><input id="entryTitle" maxlength="70" placeholder="A thought to remember" required><label for="entryBody" style="margin-top:18px">Your note</label><textarea id="entryBody" maxlength="1500" placeholder="Write your thoughts here..." required></textarea><button type="submit">Save this page</button></form><p class="journal-hint">Tip: Keep sensitive or private information out of a public website.</p></div><div><div class="eyebrow" style="color:#8b7045;margin-bottom:18px">Your saved pages</div><div class="entries" id="entries"><p class="journal-hint">Your saved pages will appear here on this device.</p></div></div></div></div></section>
 
-<section id="moments"><div class="wrap"><div class="section-head"><div><div class="eyebrow">04 / The visual diary</div><h2>My life. My moments.</h2></div><p class="section-note">A few frames from the journey — ordinary moments, kept close.</p></div><div class="gallery">
-<figure><img src="images/moment-01.jpg" alt="Portrait in a warm illuminated outdoor setting"><figcaption>A moment under the lights</figcaption></figure>
-<figure><img src="images/moment-02.jpg" alt="Quiet portrait beneath a geometric golden frame"><figcaption>Quiet chapters</figcaption></figure>
-<figure><img src="images/moment-03.png" alt="Mirror portrait in a minimal bright room"><figcaption>Behind the frame</figcaption></figure>
-<figure><img src="images/moment-04.jpg" alt="Quiet portrait in a softly lit stairwell"><figcaption>Between destinations</figcaption></figure>
-<figure><img src="images/moment-05.png" alt="Seated mirror portrait in a black shirt"><figcaption>Unfiltered moments</figcaption></figure>
-</div></div></section>
-<section id="contact"><div class="wrap"><div class="section-head"><div><div class="eyebrow">05 / The next conversation</div><h2>Find me online.</h2></div><p class="section-note">One place for my creative work, personal identity and direct contact.</p></div><div class="cards"><a class="card" href="https://youtube.com/@audionexushub" target="_blank" rel="noopener"><div class="num">YOUTUBE · CREATIVE WORK</div><h3>Audio Nexus Hub ↗</h3><p>@AudioNexusHub — music, creative experiments and collaborations.</p></a><a class="card" href="https://www.instagram.com/the.unknownx.__/" target="_blank" rel="noopener"><div class="num">INSTAGRAM · PERSONAL IDENTITY</div><h3>THE UNKNOWNX ↗</h3><p>@the.unknownx.__ — personal updates and moments.</p></a><a class="card" href="https://wa.me/918102942195" target="_blank" rel="noopener"><div class="num">DIRECT MESSAGE</div><h3>WhatsApp ↗</h3><p>Start a conversation directly.</p></a><a class="card" href="tel:+918102942195"><div class="num">PHONE</div><h3>Call ↗</h3><p>+91 8102942195</p></a><a class="card" href="sms:+918102942195"><div class="num">TEXT MESSAGE</div><h3>SMS ↗</h3><p>Send a text message to +91 8102942195.</p></a></div><p class="small-copy" style="margin-top:22px">This contact information is publicly visible. Only keep details here that you are comfortable sharing with everyone.</p></div></section>
+<body>
+
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="#home">THE <span>UNKNOWNX</span></a>
+    <button class="menu" id="menu" aria-label="Toggle navigation">MENU</button>
+    <nav class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Projects</a>
+      <a href="#journal">Journal</a>
+      <a href="#moments">Moments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap hero" id="home">
+  <div>
+    <div class="eyebrow">A personal journal · A creative portfolio</div>
+    <h1>THE<br><em>UNKNOWNX</em></h1>
+    <p class="intro">
+      A quiet space for ideas, memories and things still becoming.
+      This is my story in progress — written one page, one project
+      and one lesson at a time.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="#about">Discover my story</a>
+      <a class="btn" href="#journal">Open the journal</a>
+    </div>
+  </div>
+
+  <div class="cover">
+    <div class="cover-top">
+      <span>Personal archive</span>
+      <span>Vol. 01</span>
+    </div>
+    <div>
+      <div class="cover-mark">✳</div>
+      <div class="cover-title">
+        The Art of<br>Becoming
+        <small>NOT FINISHED. JUST BEGINNING.</small>
+      </div>
+    </div>
+    <div class="cover-bottom">
+      <span>Est. 2026</span>
+      <span>Private thoughts · Public work</span>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">01 / The person behind the pages</div>
+        <h2>A little about me.</h2>
+      </div>
+      <p class="section-note">
+        Not a finished story. Just a collection of curiosity,
+        experiments and ambitions.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="monogram"><span>U.</span></div>
+      <div class="about-copy">
+        <p>
+          I’m a curious creator who enjoys turning ideas into things
+          people can experience — from digital projects and creative
+          media to small business experiments.
+        </p>
+        <p class="small-copy">
+          I believe progress is built quietly: learn something,
+          try something, make mistakes, improve, and keep moving.
+          This website is my evolving record of that process.
+        </p>
+        <div class="quote">
+          “Stay curious. Build with intention. Let the work speak.”
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">02 / Notes from the road</div>
+        <h2>The journey.</h2>
+      </div>
+      <p class="section-note">
+        A timeline that can grow as new chapters happen.
+      </p>
+    </div>
+
+    <div class="timeline">
+      <div class="moment">
+        <div class="date">CHAPTER 01 · THE BEGINNING</div>
+        <h3>Curiosity becomes creation</h3>
+        <p>
+          Exploring technology, design, music and the possibilities
+          of building something independently.
+        </p>
+      </div>
+
+      <div class="moment">
+        <div class="date">CHAPTER 02 · EXPERIMENTS</div>
+        <h3>Learning by making</h3>
+        <p>
+          Trying ideas across websites, creative projects and
+          business concepts — discovering what works along the way.
+        </p>
+      </div>
+
+      <div class="moment">
+        <div class="date">CHAPTER 03 · STILL UNWRITTEN</div>
+        <h3>What comes next</h3>
+        <p>
+          The next chapter is open. New skills, better work
+          and bigger ideas belong here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">03 / Selected explorations</div>
+        <h2>Things I’m building.</h2>
+      </div>
+      <p class="section-note">
+        A few creative directions and projects from my world.
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="num">01 — CREATIVE MEDIA</div>
+        <h3>Audio Nexus Hub</h3>
+        <p>
+          A music-focused creative brand exploring AI-assisted covers,
+          music discovery and visual identity.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">02 — SMALL BUSINESS</div>
+        <h3>Zyka Gold</h3>
+        <p>
+          A spices brand concept focused on product presentation,
+          customer enquiries and digital presence.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">03 — DIGITAL PRODUCT</div>
+        <h3>SNIPCHI</h3>
+        <p>
+          An app-building exploration focused on bringing useful
+          creative tools and experiences together.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="journal">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">04 / The open notebook</div>
+        <h2>Journal pages.</h2>
+      </div>
+      <p class="section-note">
+        Write a thought, save a small memory,
+        or leave a note for your future self.
+      </p>
+    </div>
+
+    <div class="journal">
+      <div>
+        <div class="eyebrow" style="color:#8b7045">A page of your own</div>
+        <h3>Some things deserve a place to stay.</h3>
+        <p>
+          Your entries are saved only in this browser on this device.
+          This demo journal does not upload entries to a server.
+        </p>
+
+        <form id="entryForm">
+          <label for="entryTitle">Page title</label>
+          <input id="entryTitle" maxlength="70"
+                 placeholder="A thought to remember" required>
+
+          <label for="entryBody" style="margin-top:18px">Your note</label>
+          <textarea id="entryBody" maxlength="1500"
+                    placeholder="Write your thoughts here..." required></textarea>
+
+          <button type="submit">Save this page</button>
+        </form>
+
+        <p class="journal-hint">
+          Tip: Keep sensitive or private information out of a public website.
+        </p>
+      </div>
+
+      <div>
+        <div class="eyebrow" style="color:#8b7045;margin-bottom:18px">
+          Your saved pages
+        </div>
+        <div class="entries" id="entries">
+          <p class="journal-hint">
+            Your saved pages will appear here on this device.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="moments">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">05 / The visual diary</div>
+        <h2>My life. My moments.</h2>
+      </div>
+      <p class="section-note">
+        A few frames from the journey — ordinary moments, kept close.
+      </p>
+    </div>
+
+    <div class="gallery">
+
+      <!-- Keep these image files beside index.html in the repository root -->
+
+      <figure>
+        <img src="./moment-01.jpg"
+             alt="A moment under the lights"
+             loading="lazy">
+        <figcaption>A moment under the lights</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./moment-02.jpg"
+             alt="Quiet chapters"
+             loading="lazy">
+        <figcaption>Quiet chapters</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./moment-03.png"
+             alt="Behind the frame"
+             loading="lazy">
+        <figcaption>Behind the frame</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./moment-04.jpg"
+             alt="Between destinations"
+             loading="lazy">
+        <figcaption>Between destinations</figcaption>
+      </figure>
+
+      <figure>
+        <img src="./moment-05.png"
+             alt="Unfiltered moments"
+             loading="lazy">
+        <figcaption>Unfiltered moments</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">06 / The next conversation</div>
+        <h2>Find me online.</h2>
+      </div>
+      <p class="section-note">
+        One place for my creative work and personal identity.
+      </p>
+    </div>
+
+    <div class="cards">
+
+      <a class="card"
+         href="https://youtube.com/@audionexushub"
+         target="_blank" rel="noopener">
+        <div class="num">YOUTUBE · CREATIVE WORK</div>
+        <h3>Audio Nexus Hub ↗</h3>
+        <p>
+          @AudioNexusHub — music, creative experiments and collaborations.
+        </p>
+      </a>
+
+      <a class="card"
+         href="https://www.instagram.com/the.unknownx.__/"
+         target="_blank" rel="noopener">
+        <div class="num">INSTAGRAM · PERSONAL IDENTITY</div>
+        <h3>THE UNKNOWNX ↗</h3>
+        <p>
+          @the.unknownx.__ — personal updates and moments.
+        </p>
+      </a>
+
+      <a class="card"
+         href="https://github.com/itzzmasum7-sys"
+         target="_blank" rel="noopener">
+        <div class="num">GITHUB · DIGITAL PROJECTS</div>
+        <h3>GitHub ↗</h3>
+        <p>
+          Explore digital experiments and development projects.
+        </p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 </main>
-<footer class="wrap footer"><span>© 2026 THE UNKNOWNX</span><span>Made of ideas, memories & momentum.</span><a href="#home">Back to top ↑</a></footer>
+
+<footer class="wrap footer">
+  <span>© 2026 THE UNKNOWNX</span>
+  <span>Made of ideas, memories & momentum.</span>
+  <a href="#home">Back to top ↑</a>
+</footer>
+
 <script>
-const menu=document.getElementById('menu'),links=document.getElementById('links');
-menu.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-const form=document.getElementById('entryForm'),entries=document.getElementById('entries');
-const KEY='unknownx_journal_entries_v1';
-function loadEntries(){let items=[];try{items=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){};entries.innerHTML='';if(!items.length){entries.innerHTML='<p class="journal-hint">No pages saved yet. Your first entry can begin here.</p>';return}items.forEach(item=>{const el=document.createElement('article');el.className='entry';const title=document.createElement('strong');title.textContent=item.title;const time=document.createElement('time');time.textContent=item.date;const body=document.createElement('p');body.textContent=item.body;el.append(title,time,body);entries.append(el)})}
-form.addEventListener('submit',e=>{e.preventDefault();let items=[];try{items=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}items.unshift({title:document.getElementById('entryTitle').value.trim(),body:document.getElementById('entryBody').value.trim(),date:new Date().toLocaleString()});try{localStorage.setItem(KEY,JSON.stringify(items.slice(0,50)));form.reset();loadEntries()}catch(err){alert('Could not save. Your browser storage may be full or disabled.')}});
+/* MOBILE MENU */
+const menu = document.getElementById('menu');
+const links = document.getElementById('links');
+
+menu.addEventListener('click', () => {
+  links.classList.toggle('open');
+});
+
+links.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    links.classList.remove('open');
+  });
+});
+
+/* IMAGE ERROR HANDLING */
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('error', () => {
+    img.parentElement.classList.add('image-missing');
+    img.parentElement.querySelector('figcaption').textContent =
+      'Photo not found — check the image filename in GitHub.';
+  });
+});
+
+/* PERSONAL JOURNAL */
+const form = document.getElementById('entryForm');
+const entries = document.getElementById('entries');
+const KEY = 'unknownx_journal_entries_v1';
+
+function loadEntries() {
+  let items = [];
+
+  try {
+    items = JSON.parse(localStorage.getItem(KEY) || '[]');
+  } catch (error) {
+    items = [];
+  }
+
+  entries.innerHTML = '';
+
+  if (!items.length) {
+    entries.innerHTML =
+      '<p class="journal-hint">No pages saved yet. Your first entry can begin here.</p>';
+    return;
+  }
+
+  items.forEach(item => {
+    const el = document.createElement('article');
+    el.className = 'entry';
+
+    const title = document.createElement('strong');
+    title.textContent = item.title;
+
+    const time = document.createElement('time');
+    time.textContent = item.date;
+
+    const body = document.createElement('p');
+    body.textContent = item.body;
+
+    el.append(title, time, body);
+    entries.append(el);
+  });
+}
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+
+  let items = [];
+
+  try {
+    items = JSON.parse(localStorage.getItem(KEY) || '[]');
+  } catch (error) {
+    items = [];
+  }
+
+  items.unshift({
+    title: document.getElementById('entryTitle').value.trim(),
+    body: document.getElementById('entryBody').value.trim(),
+    date: new Date().toLocaleString()
+  });
+
+  try {
+    localStorage.setItem(KEY, JSON.stringify(items.slice(0, 50)));
+    form.reset();
+    loadEntries();
+    alert('Your journal page has been saved on this device.');
+  } catch (error) {
+    alert('Could not save. Your browser storage may be full or disabled.');
+  }
+});
+
 loadEntries();
 </script>
-</body></html>
+
+</body>
+</html>
